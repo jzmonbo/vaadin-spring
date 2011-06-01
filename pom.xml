@@ -12,6 +12,7 @@
   <groupId>com.navinpeiris</groupId>
   <artifactId>vaadin-spring</artifactId>
   <version>1.0.0-SNAPSHOT</version>
+  <packaging>war</packaging>
 
   <name>Vaadin Spring Demo</name>
   <description>Demonstration project for Vaadin and Spring integration.</description>
