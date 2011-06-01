@@ -5,6 +5,9 @@
 
 package com.navinpeiris.vaadin_spring;
 
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
+
 import com.vaadin.ui.Label;
 import com.vaadin.ui.Window;
 
@@ -14,6 +17,8 @@ import com.vaadin.ui.Window;
  * @author Navin Peiris
  * @since 1.0.0
  */
+@Component
+@Scope("session")
 public class MainWindow extends Window {
 
     private static final long serialVersionUID = 1L;

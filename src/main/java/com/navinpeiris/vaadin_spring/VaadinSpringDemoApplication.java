@@ -5,6 +5,9 @@
 
 package com.navinpeiris.vaadin_spring;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Configurable;
+
 import com.vaadin.Application;
 
 /**
@@ -13,15 +16,18 @@ import com.vaadin.Application;
  * @author Navin Peiris
  * @since 1.0.0
  */
+@Configurable
 public class VaadinSpringDemoApplication extends Application {
     private static final long serialVersionUID = 1L;
 
     public static final String APPLICATION_TITLE = "Vaading-Spring Demo";
 
-    private MainWindow mainWindow = new MainWindow();
+    @Autowired
+    private MainWindow mainWindow;
 
     @Override
     public void init() {
+        System.out.println("Main Window: " + mainWindow);
         setMainWindow(mainWindow);
     }
 
