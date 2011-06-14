@@ -5,6 +5,9 @@
 
 package com.navinpeiris.vaadin_spring;
 
+import javax.annotation.PostConstruct;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
@@ -20,14 +23,24 @@ import com.vaadin.ui.Window;
 @Component
 @Scope("session")
 public class MainWindow extends Window {
-
     private static final long serialVersionUID = 1L;
+
+    private static int instanceId = 0;
+
+    @Autowired
+    private TextLabelService textLabelService;
 
     public MainWindow() {
         super(VaadinSpringDemoApplication.APPLICATION_TITLE);
 
-        final Label label = new Label(VaadinSpringDemoApplication.APPLICATION_TITLE);
+        instanceId++;
 
-        addComponent(label);
+        addComponent(new Label(VaadinSpringDemoApplication.APPLICATION_TITLE));
+    }
+
+    @PostConstruct
+    public void addInstanceLabels() {
+        addComponent(new Label("MainWindow instanceId: " + instanceId));
+        addComponent(new Label(textLabelService.getInstanceText()));
     }
 }

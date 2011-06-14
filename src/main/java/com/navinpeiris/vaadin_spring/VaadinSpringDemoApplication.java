@@ -27,7 +27,6 @@ public class VaadinSpringDemoApplication extends Application {
 
     @Override
     public void init() {
-        System.out.println("Main Window: " + mainWindow);
         setMainWindow(mainWindow);
     }
 
