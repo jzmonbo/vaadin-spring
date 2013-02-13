@@ -35,9 +35,9 @@
     <maven.compiler.source>1.6</maven.compiler.source>
     <maven.compiler.target>1.6</maven.compiler.target>
 
-    <vaadin.version>6.7.4</vaadin.version>
-    <spring.version>3.1.0.RELEASE</spring.version>
-    <aspectj.version>1.6.12</aspectj.version>
+    <vaadin.version>6.8.8</vaadin.version>
+    <spring.version>3.2.1.RELEASE</spring.version>
+    <aspectj.version>1.7.1</aspectj.version>
     
     <!-- Plugin versions -->
     <aspectj-maven-plugin.version>1.4</aspectj-maven-plugin.version>
@@ -85,7 +85,7 @@
     <dependency>
       <groupId>javax.persistence</groupId>
       <artifactId>persistence-api</artifactId>
-      <version>1.0</version>
+      <version>1.0.2</version>
       <optional>true</optional>
     </dependency>
     <!-- AspectJ dependencies -->
